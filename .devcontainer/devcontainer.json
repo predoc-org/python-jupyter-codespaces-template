@@ -6,7 +6,11 @@
   "image": "mcr.microsoft.com/devcontainers/universal:4",
 
   // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
+  "features": {
+      "ghcr.io/devcontainers/features/python:1": {
+          "installJupyterlab": true
+      }
+  },
 
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "python3 -m pip install -r requirements.txt",
@@ -15,6 +19,7 @@
     "vscode": {
       "extensions": ["ms-toolsai.jupyter",
                      "ms-python.python",
+                     "ms-toolsai.datawrangler",
                      "eamodio.gitlens",
                      "firstdraft.terminal-clear",
                      "-github.copilot-chat"]
