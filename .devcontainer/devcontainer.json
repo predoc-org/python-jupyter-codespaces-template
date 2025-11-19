@@ -1,20 +1,21 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/universal
 {
+  "name": "Container",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/universal:4",
-  "hostRequirements": {
-    "cpus": 4
-  },
-  "waitFor": "onCreateCommand",
-  "updateContentCommand": "python3 -m pip install -r requirements.txt",
-  "postCreateCommand": "",
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "python3 -m pip install -r requirements.txt",
+
   "customizations": {
-    "codespaces": {
-      "openFiles": []
-    },
     "vscode": {
-      "extensions": [
-        "ms-toolsai.jupyter",
-        "ms-python.python"
-      ]
+      "extensions": ["ms-toolsai.jupyter",
+                     "ms-python.python",
+                     "ms-toolsai.datawrangler",
+                     "eamodio.gitlens",
+                     "firstdraft.terminal-clear",
+                     "-github.copilot-chat"]
     }
   }
 }
