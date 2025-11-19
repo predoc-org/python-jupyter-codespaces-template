@@ -33,8 +33,4 @@
   "html.format.templating": true,
   "terminal.integrated.altClickMovesCursor": true,
   "terminal.integrated.defaultProfile.linux": "bash",
-  "gitpod.openInStable.neverPrompt": true,
-  "gitlens.showWelcomeOnInstall": false,
-  "gitlens.currentLine.enabled": false,
 }
-
